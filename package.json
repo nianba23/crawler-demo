@@ -1,0 +1,30 @@
+{
+  "name": "crawler-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-t": "ts-node ./src/crawler.ts",
+    "dev-c": "ts-node ./src/combination/crawler.ts",
+    "dev-s": "ts-node ./src/singleton/crawler.ts",
+    "build": "tsc",
+    "dev:build-w": "tsc -w",
+    "dev:start": "nodemon node ./build/crawler.js",
+    "dev": "concurrently npm:dev:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/superagent": "^8.1.9",
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "superagent": "^10.1.0"
+  }
+}
